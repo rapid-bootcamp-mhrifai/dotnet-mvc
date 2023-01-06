@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebMvc.Models;
 
 namespace WebMvc.Controllers
 {
@@ -8,5 +9,10 @@ namespace WebMvc.Controllers
         {
             return View();
         }
+
+        private static List<AbsensiViewModel> _absensiViewModels = new List<AbsensiViewModel>()
+        {
+            new AbsensiViewModel(1, 001, 2015, 12, 31, 2015, 12, 31, "Bali", "Absen"),
+        };
     }
 }
