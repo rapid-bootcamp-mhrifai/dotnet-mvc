@@ -1,16 +1,17 @@
-﻿@model List<ProductViewModel>
+﻿@model List<AssetViewModel>
 @{
-    ViewData["Title"] = "Products";
+    ViewData["Title"] = "Asset List";
 }
 
-<h2>Products</h2>
+<h2>Asset List</h2>
 <table class="table table-responsive">
     <thead>
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Category</th>
-            <th>Price</th>
+            <th>Serial Number</th>
+            <th>Purchase Year</th>
+            <th>Location</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -20,8 +21,9 @@
             <tr>
                 <td>@item.Id</td>
                 <td>@item.Name</td>
-                <td>@item.Category</td>
-                <td>@item.Price</td>
+                <td>@item.SerialNumber</td>
+                <td>@item.PurchaseYear</td>
+                <td>@item.Location</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-success">View</a>
