@@ -12,7 +12,7 @@ namespace WebMvc.Controllers
 
         private static List<AbsensiViewModel> _absensiViewModels = new List<AbsensiViewModel>()
         {
-            new AbsensiViewModel(1, 001, 2015, 12, 31, 2015, 12, 31, "Bali", "Absen"),
+            new AbsensiViewModel(1, 002, '01/01/2023', '01/01/2023', "Bali", "Lupa"),
         };
     }
 }
