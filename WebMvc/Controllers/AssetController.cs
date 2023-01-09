@@ -47,7 +47,7 @@ namespace WebMvc.Controllers
             return View(asset);
         }
 
-        [HttpDelete]
+        //[HttpDelete]
         public IActionResult Delete(int? id)
         {
             try
@@ -56,7 +56,7 @@ namespace WebMvc.Controllers
 
                 _assetViewModels.Remove(asset2);
 
-                return Redirect("List");
+                return RedirectToAction("List");
             }
             catch
             {

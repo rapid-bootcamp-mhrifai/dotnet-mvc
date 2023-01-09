@@ -46,12 +46,12 @@ namespace WebMvc.Controllers
             return View(absensi);
         }
 
-        [HttpDelete]
+        //[HttpDelete]
         public IActionResult Delete(int? id)
         {
             AbsensiViewModel absensi = _absensiViewModels.Find(x => x.Id.Equals(id));
             _absensiViewModels.Remove(absensi);
-            return Redirect("List");
+            return RedirectToAction("List");
         }
     }
 }

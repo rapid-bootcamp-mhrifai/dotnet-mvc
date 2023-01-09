@@ -74,7 +74,7 @@ namespace WebMvc.Controllers
             return View(product);
         }
 
-        [HttpDelete]
+        //[HttpDelete]
         public IActionResult Delete(int? id)
         {
             // find data dulu
@@ -83,7 +83,7 @@ namespace WebMvc.Controllers
             // remove from list
             _productViewModels.Remove(product);
 
-            return Redirect("List");
+            return RedirectToAction("List");
         }
     }
 }

@@ -52,7 +52,7 @@ namespace WebMvc.Controllers
             return View(customer);
         }
 
-        [HttpDelete]
+        //[HttpDelete]
         public IActionResult Delete(int? id)
         {
             try
@@ -61,7 +61,7 @@ namespace WebMvc.Controllers
 
                 _customerListModels.Remove(customer);
 
-                return Redirect("List");
+                return RedirectToAction("List");
             }
             catch
             {
